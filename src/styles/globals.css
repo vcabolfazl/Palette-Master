@@ -2,26 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  @font-face {
+    font-family: Mooli Regular;
+    src: url(/assets/fonts/Mooli-Regular.ttf);
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @font-face {
+    font-family: Vazir Medium;
+    src: url(/assets/fonts/Vazir-Medium.woff2);
+  }
+
+  :lang(fa) {
+    font-family: Vazir Medium;
+  }
+
+  :lang(en) {
+    font-family: Mooli Regular;
+  }
+
+  body {
+    background: #1f1f1f;
+    color: #f1f1f1;
+  }
+
+
+  input[type="color"] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    cursor: pointer;
+  }
+
+  input[type="color"]:focus {
+    border-radius: 0;
+    outline: none;
+  }
+
+  input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+
+  input[type="color"]::-webkit-color-swatch {
+    border: 0;
+    border-radius: 0;
+  }
+
+  input[type="color"]::-moz-color-swatch,
+  input[type="color"]::-moz-focus-inner {
+    border: 0;
+  }
+
+  input[type="color"]::-moz-focus-inner {
+    padding: 0;
+  }
 }
