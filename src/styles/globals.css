@@ -8,24 +8,46 @@
     src: url(/assets/fonts/Mooli-Regular.ttf);
   }
 
-  @font-face {
-    font-family: Vazir Medium;
-    src: url(/assets/fonts/Vazir-Medium.woff2);
-  }
-
-  :lang(fa) {
-    font-family: Vazir Medium;
-  }
-
-  :lang(en) {
-    font-family: Mooli Regular;
-  }
-
   body {
     background: #1f1f1f;
     color: #f1f1f1;
+    font-family: Mooli Regular;
   }
 
+  .zoom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    justify-content: center;
+    animation: zoomEffect 1s alternate;
+    padding: 0;
+
+  }
+
+
+  @keyframes zoomEffect {
+    0% {
+      align-items: start;
+    }
+
+    25% {
+      padding-top: 150px;
+    }
+
+    50% {
+      align-items: end;
+    }
+
+    75% {
+      padding-bottom: 150px;
+    }
+
+    100% {
+      align-items: center;
+      padding: 0;
+    }
+  }
 
   input[type="color"] {
     appearance: none;
