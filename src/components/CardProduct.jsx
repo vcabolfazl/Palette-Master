@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function CardProduct({ bg, title, desc, bgBtn }) {
+export default function CardProduct({ bg, title, desc, bgBtn ,img}) {
 
  return (
   <div className=" w-fit rounded-lg" style={{ background: bg }}>
@@ -16,7 +16,7 @@ export default function CardProduct({ bg, title, desc, bgBtn }) {
     </div>
    </div>
    <div className="card__content">
-    <img src="/assets/Images/web/p2.png" alt="" />
+    <img src={`/assets/Images/web/p${img}.png`} alt="product" />
     <div className="text-black">
      <p className='mb-2 text-lg font-semibold' style={{ color: title }}>Lorem ipsum dolor sit</p>
      <span className='px-2 sm:px-5 text-left line-clamp-3' style={{ color: desc }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ad reprehenderit amet!</span>

@@ -138,8 +138,8 @@ export default function Web() {
 
         <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 items-center justify-center px-4 text-center">
           {
-            Array.from({ length: 4 }, (_, index) => index + 1).map(item => (
-              <CardProduct key={item} bg={bgCard} title={bgtitleCard} desc={description} bgBtn={secondButton} />
+            Array.from({ length: 4 }, (_, index) => index + 1).map((item, index) => (
+              <CardProduct key={item} bg={bgCard} title={bgtitleCard} desc={description} bgBtn={secondButton} img={index + 1} />
 
             ))
           }
