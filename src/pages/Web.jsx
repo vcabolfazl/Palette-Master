@@ -15,7 +15,7 @@ export default function Web() {
   const [secondButton, setSecondButton] = useState("#8A5663")
   const [footer, setFooter] = useState("#2C363F")
   return (
-    <div className='px-2 md:px-0 container'>
+    <div className='px-2 md:px-0 container mb-8'>
       <form className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-11 gap-6 mt-16 mb-8'>
         <h2 className='col-span-full text-2xl font-semibold'>Enter the desired colors</h2>
         {/* Background */}

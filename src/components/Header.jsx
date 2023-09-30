@@ -1,9 +1,12 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import React from 'react'
 
 export default function Header() {
+ const router = useRouter()
+
  return (
-  <header className="border-b border-gray-500">
+  <header className={`border-b border-gray-500 ${router.pathname == "/" ? "hidden" : "block"}`}>
    <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <Link href="/" className="flex items-center">
      <img src="/assets/images/logo.svg" className="h-8 mr-3" alt="Palette Master Logo" />
